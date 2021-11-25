@@ -1,0 +1,79 @@
+* {
+   font-family: monospace, sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   min-height: 100vh;
+   background-color: #003049;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.wrapper {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+}
+.time {
+   color: #fff;
+   font-size: 4.5rem;
+   position: relative;
+}
+
+.time::after {
+   content: '';
+   z-index: -1;
+   width: 320px;
+   height: 320px;
+   background-color: #003049;
+   display: block;
+   top: 65%;
+   left: 50%;
+   padding: 30px;
+   border-radius: 50%;
+   transform: translate(-50%,-50%);
+   position: absolute;
+   animation-name: shine;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+}
+
+@keyframes shine {
+   0%,100% {
+      box-shadow: 0px 0px 32px -10px #fca311;
+   }
+   50% {
+      box-shadow: 0px 0px 32px 3px #fca311;
+   }
+}
+
+.buttons {
+   width: 260px;
+   margin-top: 20px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.buttons button {
+   border: 1.5px solid #fff;
+   background-color: transparent;
+   outline: 0;
+   color: #fff;
+   cursor: pointer;
+   font-size: 0.9rem;
+   padding:10px 20px;
+   border-radius: 10rem;
+   transition: 0.3s ease;
+}
+
+button:hover {
+   background-color: #fff;
+   color: #222;
+
+}
